@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: MyString
+  email: MyString
+  password: MyString
+  auth_token: MyString
+  auth_token_expire: 2016-02-25 00:24:58
+  city: MyString
+  state: MyString
+  source: MyString
+  college: MyString
+  course: MyString
+  year: MyString
+  phone: MyString
+  custom: MyString
+
+two:
+  id: 1
+  name: MyString
+  email: MyString
+  password: MyString
+  auth_token: MyString
+  auth_token_expire: 2016-02-25 00:24:58
+  city: MyString
+  state: MyString
+  source: MyString
+  college: MyString
+  course: MyString
+  year: MyString
+  phone: MyString
+  custom: MyString

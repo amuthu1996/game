@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @register.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @register.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @register.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @register.password %>
+</p>
+
+<p>
+  <strong>Auth token:</strong>
+  <%= @register.auth_token %>
+</p>
+
+<p>
+  <strong>Auth token expire:</strong>
+  <%= @register.auth_token_expire %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @register.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @register.state %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @register.source %>
+</p>
+
+<p>
+  <strong>College:</strong>
+  <%= @register.college %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @register.course %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @register.year %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @register.phone %>
+</p>
+
+<p>
+  <strong>Custom:</strong>
+  <%= @register.custom %>
+</p>
+
+<%= link_to 'Edit', edit_register_path(@register) %> |
+<%= link_to 'Back', registers_path %>
