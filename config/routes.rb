@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :paids
+  resources :teams
+  resources :events
   resources :registers
   devise_for :users
   get 'home/index'

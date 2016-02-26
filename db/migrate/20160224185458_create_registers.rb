@@ -1,7 +1,7 @@
 class CreateRegisters < ActiveRecord::Migration
   def change
     create_table :registers, id: false do |t|
-      t.integer :id,                  null: false
+      t.integer :id,                  null: false, primary_key: true
       t.string :name,                 null: false
       t.string :email,                null: false
       t.string :password,             null: false

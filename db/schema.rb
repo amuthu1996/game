@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224185458) do
+ActiveRecord::Schema.define(version: 20160226033421) do
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "members"
+    t.datetime "schedule"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "paids", force: :cascade do |t|
+    t.boolean  "pay"
+    t.integer  "register_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "registers", id: false, force: :cascade do |t|
-    t.integer  "id",                             null: false
+    t.integer  "id"
     t.string   "name",                           null: false
     t.string   "email",                          null: false
     t.string   "password",                       null: false
@@ -33,6 +48,15 @@ ActiveRecord::Schema.define(version: 20160224185458) do
   end
 
   add_index "registers", ["id"], name: "index_registers_on_id", unique: true
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "teams", ["event_id"], name: "index_teams_on_event_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
