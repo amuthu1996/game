@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20160226033421) do
 
   create_table "registers", id: false, force: :cascade do |t|
     t.integer  "id"
-    t.string   "name",                           null: false
     t.string   "email",                          null: false
+    t.string   "name",                           null: false
     t.string   "password",                       null: false
     t.string   "auth_token",        default: ""
     t.datetime "auth_token_expire"
@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(version: 20160226033421) do
   end
 
   add_index "registers", ["id"], name: "index_registers_on_id", unique: true
+
+  create_table "registers_teams", id: false, force: :cascade do |t|
+    t.integer "register_id"
+    t.integer "team_id"
+  end
+
+  add_index "registers_teams", ["register_id"], name: "index_registers_teams_on_register_id"
+  add_index "registers_teams", ["team_id"], name: "index_registers_teams_on_team_id"
 
   create_table "teams", force: :cascade do |t|
     t.string   "name"
