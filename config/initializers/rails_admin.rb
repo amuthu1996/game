@@ -19,6 +19,7 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
+  
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -34,6 +35,9 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
-
-  
+  config.model 'Team' do
+    edit do
+      mapping_key :email
+    end
+  end
 end

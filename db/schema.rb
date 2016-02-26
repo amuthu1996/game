@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20160226033421) do
   create_table "registers", id: false, force: :cascade do |t|
     t.integer  "id"
     t.string   "email",                          null: false
-    t.string   "name",                           null: false
     t.string   "password",                       null: false
     t.string   "auth_token",        default: ""
     t.datetime "auth_token_expire"
@@ -43,6 +42,7 @@ ActiveRecord::Schema.define(version: 20160226033421) do
     t.string   "year",                           null: false
     t.string   "phone",             default: ""
     t.string   "custom",            default: ""
+    t.string   "name"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end

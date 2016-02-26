@@ -11,8 +11,7 @@ class CreateRegisters < ActiveRecord::Migration
 
     create_table :registers, id: false do |t|
       t.integer :id,                  null: false, primary_key: true
-      t.string :email,                null: false
-      t.string :name,                 null: false
+      t.string :email,                null: false, unique: true
       t.string :password,             null: false
       t.string :auth_token,           default: ""
       t.timestamp :auth_token_expire, default: ""
@@ -24,6 +23,7 @@ class CreateRegisters < ActiveRecord::Migration
       t.string :year,                 null: false
       t.string :phone,                default: ""
       t.string :custom,               default: ""
+      t.string :name
 
       t.timestamps null: false
     end
