@@ -35,9 +35,5 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
-  config.model 'Team' do
-    edit do
-      mapping_key :email
-    end
-  end
+  
 end
